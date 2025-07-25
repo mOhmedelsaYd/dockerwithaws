@@ -1,0 +1,20 @@
+version: '2.33.1'
+services: 
+  node-app:
+    build: 
+      context: .
+      target: development
+      # args: 
+      #   - NODE_ENV=development
+    volumes:
+      - ./src:/app/src:ro
+    environment:
+      - NODE_ENV=development
+    command: npm run start-dev
+
+
+## you can use enviroment variables in the docker-compose file such as: 
+    ## environment:
+    ## - NODE_ENV=development ###
+    
+    

@@ -1,0 +1,17 @@
+version: '2.33.1'
+services: 
+  node-app: 
+    container_name: express-app-container_name
+    build: .
+    volumes:
+      - ./src:/app/src:ro
+    ports: 
+      - "4000:6000"
+    env_file:
+      - ./.env
+
+## you can use enviroment variables in the docker-compose file such as: 
+    ## environment:
+    ## - NODE_ENV=development ###
+    
+    
