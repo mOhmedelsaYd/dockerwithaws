@@ -1,7 +1,8 @@
 version: '3'
 services: 
   node-app: 
-    container_name: express-app-container_name    
+    container_name: express-app-container_name 
+    image: mohamedelsayed342/ec2mohamed   
     ports: 
       - "4000:6000"
     env_file:
